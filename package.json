@@ -1,0 +1,34 @@
+{
+    "name": "mnscript",
+    "displayName": "MNScript",
+    "description": "Adds Visual Studio Code language support for CivilServer's MAXNET scripting language.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.79.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "mnscript",
+                "aliases": [
+                    "MNScript",
+                    "mnscript"
+                ],
+                "extensions": [
+                    ".msc"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mnscript",
+                "scopeName": "source.mnscript",
+                "path": "./syntaxes/mnscript.tmLanguage.json"
+            }
+        ]
+    }
+}
