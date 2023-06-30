@@ -72,7 +72,7 @@
 				},
 				{
 					"name": "keyword.operator.mnscript",
-					"match": "\\b(and|or|not|\\|\\||\\&\\&|\\!)\\b"
+					"match": "\\b(and|or|not)\\b|\\|\\||\\&\\&|\\!"
 				}
 			]			
 		},
