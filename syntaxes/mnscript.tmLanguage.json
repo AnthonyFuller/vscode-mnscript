@@ -21,7 +21,7 @@
 			"include": "#operators"
 		},
 		{
-			"include": "#semicolon"
+			"include": "#punctuation"
 		}
 	],
 	"repository": {
@@ -76,9 +76,17 @@
 				}
 			]			
 		},
-		"semicolon": {
-			"name": "punctuation.terminator.statement.mnscript",
-			"match": ";"
+		"punctuation": {
+			"patterns": [
+				{
+					"name": "punctuation.terminator.statement.mnscript",
+					"match": ";"
+				},
+				{
+					"name": "punctuation.separator.delimiter.mnscript",
+					"match": ","
+				}
+			]
 		}
 	},
 	"scopeName": "source.mnscript"
