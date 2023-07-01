@@ -29,11 +29,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.mnscript",
-					"match": "\\b(if|while|return|function|using)\\b"
-				},
-				{
-					"name": "keyword.operator.new.mnscript",
-					"match": "\\bnew\\b"
+					"match": "\\b(if|while|return|function|using|else)\\b"
 				}
 			]
 		},
@@ -73,6 +69,10 @@
 				{
 					"name": "keyword.operator.mnscript",
 					"match": "\\b(and|or|not)\\b|\\|\\||\\&\\&|\\!"
+				},
+				{
+					"name": "keyword.operator.new.mnscript",
+					"match": "\\bnew\\b"
 				}
 			]			
 		},
