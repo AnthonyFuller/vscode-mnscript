@@ -64,11 +64,7 @@
 			"patterns": [
 				{
 					"name": "keyword.operator.mnscript",
-					"match": "\\+|-|%|#|\\*|\\/|\\^|==?|!=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)"
-				},
-				{
-					"name": "keyword.operator.mnscript",
-					"match": "\\b(and|or|not)\\b|\\|\\||\\&\\&|\\!"
+					"match": "\\b(and|or|not)\\b|\\|\\||\\&\\&|\\!|\\+|-|%|#|\\*|\\/|\\^|==?|!=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)"
 				},
 				{
 					"name": "keyword.operator.new.mnscript",
