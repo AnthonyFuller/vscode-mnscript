@@ -1,4 +1,4 @@
 # MNScript VSC
-Adds Visual Studio Code language support for CivilServer's MAXNET scripting language.
+Adds Visual Studio Code language support for CivilNetworks' MAXNET scripting language.
 
 ## This is currently a Work in Progress.

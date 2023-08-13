@@ -1,14 +1,37 @@
 {
     "name": "mnscript",
     "displayName": "MNScript",
-    "description": "Adds Visual Studio Code language support for CivilServer's MAXNET scripting language.",
+    "description": "Adds Visual Studio Code language support for CivilNetworks' MAXNET scripting language.",
+    "author": "Anthony Fuller",
+    "publisher": "AnthonyFuller",
+    "license": "GPLv3",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.79.0"
     },
+    "homepage": "https://github.com/AnthonyFuller/vscode-mnscript",
+    "repository": {
+        "url": "https://github.com/AnthonyFuller/vscode-mnscript",
+        "type": "git"
+    },
+    "bugs": {
+        "url": "https://github.com/AnthonyFuller/vscode-mnscript/issues"
+    },
     "categories": [
         "Programming Languages"
     ],
+    "keywords": [
+        "maxnet",
+        "civilnetworks",
+        "civilgamers",
+        "mnscript",
+        "gmod",
+        "garrys mod"
+    ],
+    "scripts": {
+        "build": "vsce package",
+        "publish": "vsce publish --yarn"
+    },
     "contributes": {
         "languages": [
             {
@@ -30,5 +53,8 @@
                 "path": "./syntaxes/mnscript.tmLanguage.json"
             }
         ]
+    },
+    "devDependencies": {
+        "@vscode/vsce": "^2.20.1"
     }
 }
