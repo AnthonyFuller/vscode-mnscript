@@ -6,6 +6,7 @@
     "publisher": "AnthonyFuller",
     "license": "GPL-3.0-or-later",
     "version": "0.0.1",
+    "icon": "assets/icon.png",
     "engines": {
         "vscode": "^1.79.0"
     },
