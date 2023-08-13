@@ -4,7 +4,7 @@
     "description": "Adds Visual Studio Code language support for CivilNetworks' MAXNET scripting language.",
     "author": "Anthony Fuller",
     "publisher": "AnthonyFuller",
-    "license": "GPLv3",
+    "license": "GPL-3.0-or-later",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.79.0"

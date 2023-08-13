@@ -23,7 +23,9 @@ jobs:
           cache: "yarn"
 
       - name: Build Extension
-        run: yarn build
+        run: |
+          yarn install
+          yarn build
 
       - name: Upload Action
         uses: actions/upload-artifact@v3
