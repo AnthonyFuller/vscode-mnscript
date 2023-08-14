@@ -64,7 +64,7 @@
 			"patterns": [
 				{
 					"name": "keyword.operator.mnscript",
-					"match": "\\|\\||\\&\\&|\\!|==?|!=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)"
+					"match": "\\|\\||\\&\\&|==?|!=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)"
 				},
 				{
 					"name": "keyword.operator.arithmetic.mnscript",
