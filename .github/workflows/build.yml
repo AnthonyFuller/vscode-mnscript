@@ -33,11 +33,15 @@ jobs:
       - name: Upload Action
         uses: actions/upload-artifact@v3
         with:
-          path: mnscript-*.vsix
+          path: mnscript.vsix
 
-      - name: Publish
+      - name: Publish to VSC Marketplace
         if: startsWith(github.ref, 'refs/tags/')
-        run: yarn vsce publish --pat ${{ secrets.VSCE_PAT }}
+        run: yarn vsce publish -i mnscript.vsix --pat ${{ secrets.VSCE_PAT }}
+
+      - name: Publish to OVSX
+        if: startsWith(github.ref, 'refs/tags/')
+        run: yarn ovsx publish mnscript.vsix -p ${{ secrets.OVSX_PAT }}
 
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/')

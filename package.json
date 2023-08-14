@@ -5,7 +5,7 @@
     "author": "Anthony Fuller",
     "publisher": "AnthonyFuller",
     "license": "GPL-3.0-or-later",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "icon": "assets/icon.png",
     "engines": {
         "vscode": "^1.79.0"
@@ -62,6 +62,7 @@
         ]
     },
     "devDependencies": {
-        "@vscode/vsce": "^2.20.1"
+        "@vscode/vsce": "^2.20.1",
+        "ovsx": "^0.8.3"
     }
 }
