@@ -29,7 +29,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.mnscript",
-					"match": "\\b(if|while|return|function|using|else)\\b"
+					"match": "\\b(if|while|return|function|using|include|else)\\b"
 				}
 			]
 		},
