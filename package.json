@@ -30,8 +30,7 @@
         "garrys mod"
     ],
     "scripts": {
-        "build": "vsce package",
-        "publish": "vsce publish --yarn"
+        "build": "vsce package -o mnscript.vsix"
     },
     "contributes": {
         "languages": [
