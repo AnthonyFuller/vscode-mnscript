@@ -48,4 +48,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           prerelease: false
-          files: mnscript-*.vsix
+          files: mnscript.vsix
