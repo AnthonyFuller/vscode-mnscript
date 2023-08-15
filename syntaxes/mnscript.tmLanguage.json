@@ -3,16 +3,16 @@
 	"name": "MNScript",
 	"patterns": [
 		{
-			"include": "#ent-class"
-		},
-		{
 			"include": "#meta-class"
 		},
 		{
-			"include": "#ent-functions"
+			"include": "#ent-class"
 		},
 		{
 			"include": "#meta-functions"
+		},
+		{
+			"include": "#ent-functions"
 		},
 		{
 			"include": "#storage"
@@ -44,23 +44,23 @@
 			"contentName": "entity.name.class.mnscript",
 			"begin": "class",
 			"end": "{",
-			"include": "#meta-class"
+			"include": "#meta-functions"
 		},
 		"meta-class":{
 			"patterns": [
 				{
 					"name": "meta.class.mnscript",
 					"begin": "class",
-					"end": "}",
-					"include": "#ent-functions"
+					"end": "{",
+					"include": "#ent-class"
 				}
 			]
 		},
 		"ent-functions": {
 			"contentName": "entity.name.class.mnscript",
-			"begin": "function<.+>|function",
-			"end": "(",
-			"include": "#meta-function"
+			"begin": "function<.*>|function",
+			"end": "{",
+			"include": "#main-loop"
 			
 		},
 		"meta-functions": {
@@ -68,33 +68,36 @@
 				{
 					"name": "meta.function.mnscript",
 					"begin": "function",
-					"end": "}",
-					"patterns": [
-						{
-							"include": "#keywords"
-						},
-						{
-							"include": "#strings"
-						},
-						{
-							"include": "#comments"
-						},
-						{
-							"include": "#numbers"
-						},
-						{
-							"include": "#constants"
-						},
-						{
-							"include": "#operators"
-						},
-						{
-							"include": "#punctuation"
-						},
-						{
-							"include": "#storage"
-						}
-					]
+					"end": "{",
+					"include": "#ent-functions"					
+				}
+			]
+		},
+		"main-loop": {
+			"patterns": [
+				{
+					"include": "#keywords"
+				},
+				{
+					"include": "#strings"
+				},
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#numbers"
+				},
+				{
+					"include": "#constants"
+				},
+				{
+					"include": "#operators"
+				},
+				{
+					"include": "#punctuation"
+				},
+				{
+					"include": "#storage"
 				}
 			]
 		},
