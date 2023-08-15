@@ -22,6 +22,9 @@
 		},
 		{
 			"include": "#punctuation"
+		},
+		{
+			"include": "#variable"
 		}
 	],
 	"repository": {
@@ -85,6 +88,14 @@
 				{
 					"name": "punctuation.separator.delimiter.mnscript",
 					"match": ","
+				}
+			]
+		},
+		"variable":{
+			"patterns": [
+				{
+					"name":"variable.mnscript",
+					"match": "String[]|Number[]|Bool[]|string|number|bool"
 				}
 			]
 		}
