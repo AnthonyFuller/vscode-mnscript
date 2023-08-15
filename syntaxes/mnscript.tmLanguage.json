@@ -24,7 +24,7 @@
 			"include": "#punctuation"
 		},
 		{
-			"include": "#variable"
+			"include": "#storage"
 		}
 	],
 	"repository": {
@@ -32,7 +32,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.mnscript",
-					"match": "\\b(if|while|return|function|using|include|else|class)\\b"
+					"match": "\\b(if|while|return|using|include|else)\\b"
 				}
 			]
 		},
@@ -91,11 +91,15 @@
 				}
 			]
 		},
-		"variable":{
+		"storage":{
 			"patterns": [
 				{
-					"name":"variable.mnscript",
-					"match": "String[]|Number[]|Bool[]|string|number|bool"
+					"name":"storage.mnscript",
+					"match":"function|function<.*>|class"
+				},
+				{
+					"name":"storage.type",
+					"match": "string|number|bool"
 				}
 			]
 		}
