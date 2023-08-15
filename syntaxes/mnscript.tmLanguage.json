@@ -31,6 +31,9 @@
 		},
 		{
 			"include": "#punctuation"
+		},
+		{
+			"include": "#variables"
 		}
 	],
 	"repository": {
@@ -78,6 +81,9 @@
 				},
 				{
 					"include": "#storage"
+				},
+				{
+					"include": "#variables"
 				}
 			]
 		},
@@ -156,9 +162,23 @@
 				},
 				{
 					"name":"storage.type.mnscript",
-					"match": "string|number|bool|String|Number|Bool"
+					"match": "string|number|bool|string\\[\\]|number\\[\\]|bool\\[\\]",
+					"include": "#variables"
 				}
 			]
+		},
+		"variables":{
+			"begin": "string|number|bool|string\\[\\]|number\\[\\]|bool\\[\\]",
+			"end": ";",
+			"beginCaptures": {
+				"0":{ "name":"storage.type.mnscript"}
+			},
+			"patterns": [
+				{
+					"match": "(?<=\\=\\s+)[a-zA-Z\\_]+|[a-zA-Z\\_]+;|[a-zA-Z\\_]+\\s*(?=\\=)|[a-zA-Z\\_]+\\s*(?!\\))|(?<!\\()[a-zA-Z\\_]",
+					"name": "variable.name.mnscript"
+				}
+			]			
 		}
 	},
 	"scopeName": "source.mnscript"
