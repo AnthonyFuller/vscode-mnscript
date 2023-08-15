@@ -3,13 +3,7 @@
 	"name": "MNScript",
 	"patterns": [
 		{
-			"include": "#meta-class"
-		},
-		{
 			"include": "#ent-class"
-		},
-		{
-			"include": "#meta-functions"
 		},
 		{
 			"include": "#ent-functions"
@@ -43,35 +37,21 @@
 		"ent-class": {
 			"contentName": "entity.name.class.mnscript",
 			"begin": "class",
-			"end": "{",
-			"include": "#meta-functions"
-		},
-		"meta-class":{
-			"patterns": [
-				{
-					"name": "meta.class.mnscript",
-					"begin": "class",
-					"end": "{",
-					"include": "#ent-class"
-				}
-			]
+			"end": "\\{",
+			"beginCaptures": {
+				"0":{ "name": "storage.type.class.mnscript"}
+			},
+			"include": "#ent-functions"
 		},
 		"ent-functions": {
 			"contentName": "entity.name.class.mnscript",
-			"begin": "function<.*>|function",
-			"end": "{",
+			"begin": "function<.*>|(function)",
+			"end": "\\(",
+			"beginCaptures": {
+				"0":{ "name": "storage.type.function.mnscript"}
+			},
 			"include": "#main-loop"
 			
-		},
-		"meta-functions": {
-			"patterns": [
-				{
-					"name": "meta.function.mnscript",
-					"begin": "function",
-					"end": "{",
-					"include": "#ent-functions"					
-				}
-			]
 		},
 		"main-loop": {
 			"patterns": [
@@ -167,16 +147,16 @@
 		"storage":{
 			"patterns": [
 				{
-					"name":"storage.function.mnscript",
-					"match":"function|function<.*>"
+					"name":"storage.type.function.mnscript",
+					"match":"function"
 				},
 				{
-					"name":"storage.class.mnscript",
+					"name":"storage.type.class.mnscript",
 					"match":"class"
 				},
 				{
-					"name":"storage.type",
-					"match": "string|number|bool"
+					"name":"storage.type.mnscript",
+					"match": "string|number|bool|String|Number|Bool"
 				}
 			]
 		}
