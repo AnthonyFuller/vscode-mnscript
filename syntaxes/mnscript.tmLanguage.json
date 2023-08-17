@@ -3,6 +3,15 @@
 	"name": "MNScript",
 	"patterns": [
 		{
+			"include": "#ent-class"
+		},
+		{
+			"include": "#ent-functions"
+		},
+		{
+			"include": "#storage"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -22,14 +31,67 @@
 		},
 		{
 			"include": "#punctuation"
+		},
+		{
+			"include": "#variables"
 		}
 	],
 	"repository": {
+		"ent-class": {
+			"contentName": "entity.name.class.mnscript",
+			"begin": "class",
+			"end": "\\{",
+			"beginCaptures": {
+				"0":{ "name": "storage.type.class.mnscript"}
+			},
+			"include": "#ent-functions"
+		},
+		"ent-functions": {
+			"contentName": "entity.name.class.mnscript",
+			"begin": "function<.*>|(function)",
+			"end": "\\(",
+			"beginCaptures": {
+				"0":{ "name": "storage.type.function.mnscript"}
+			},
+			"include": "#main-loop"
+			
+		},
+		"main-loop": {
+			"patterns": [
+				{
+					"include": "#keywords"
+				},
+				{
+					"include": "#strings"
+				},
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#numbers"
+				},
+				{
+					"include": "#constants"
+				},
+				{
+					"include": "#operators"
+				},
+				{
+					"include": "#punctuation"
+				},
+				{
+					"include": "#storage"
+				},
+				{
+					"include": "#variables"
+				}
+			]
+		},
 		"keywords": {
 			"patterns": [
 				{
 					"name": "keyword.control.mnscript",
-					"match": "\\b(if|while|return|function|using|include|else)\\b"
+					"match": "\\b(if|while|return|using|include|else)\\b"
 				}
 			]
 		},
@@ -87,6 +149,35 @@
 					"match": ","
 				}
 			]
+		},
+		"storage":{
+			"patterns": [
+				{
+					"name":"storage.type.function.mnscript",
+					"match":"function"
+				},
+				{
+					"name":"storage.type.class.mnscript",
+					"match":"class"
+				},
+				{
+					"name":"storage.type.mnscript",
+					"include": "#variables"
+				}
+			]
+		},
+		"variables":{
+			"begin": "string|number|bool|string\\[\\]|number\\[\\]|bool\\[\\]",
+			"end": ";",
+			"beginCaptures": {
+				"0":{ "name":"storage.type.mnscript"}
+			},
+			"patterns": [
+				{
+					"match": "(?<=\\=\\s+)[a-zA-Z\\_0-9]+|[a-zA-Z\\_0-9]+(?=;)|[a-zA-Z\\_0-9]+\\s*(?=\\=)|[a-zA-Z\\_0-9]+\\s*(?!\\))|(?<!\\()[a-zA-Z\\_0-9]|(?<!\\{)[a-zA-Z\\_0-9]",
+					"name": "variable.name.mnscript"
+				}
+			]			
 		}
 	},
 	"scopeName": "source.mnscript"
