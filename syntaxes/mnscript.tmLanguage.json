@@ -162,7 +162,6 @@
 				},
 				{
 					"name":"storage.type.mnscript",
-					"match": "string|number|bool|string\\[\\]|number\\[\\]|bool\\[\\]",
 					"include": "#variables"
 				}
 			]
