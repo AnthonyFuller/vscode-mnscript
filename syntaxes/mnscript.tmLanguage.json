@@ -157,6 +157,10 @@
 					"match":"function"
 				},
 				{
+					"name":"storage.type.constructor.mnscript",
+					"match":"constructor"
+				},
+				{
 					"name":"storage.type.class.mnscript",
 					"match":"class"
 				},
